@@ -66,4 +66,3 @@ clone fonts && \
 	7z e $HOME/.local/share/fonts/font.zip
 
 exit
-
