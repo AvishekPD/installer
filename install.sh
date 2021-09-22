@@ -32,6 +32,7 @@ aur_install() {
 		-paru)
 			paru -S "${@:2}" --needed --noconfirm --noreviews 
 			;;
+
 		-yay)
 			yay -S "${@:2}" --noconfirm --needed
 			;;
@@ -41,14 +42,15 @@ aur_install() {
 
 ## Installing stuffs here
 
-aur_install -paru picom-ibhagwan-git libxft-bgra-git
+aur_install -paru picom-ibhagwan-git libxft-bgra-git \
+    yt-dlp yt-dlp-drop-in
 
 # getting root access for rest of the install
 sudo -s  
 
 pacman -S \
 	xorg xorg-xinit xorg-xinput \
-	feh dmenu mpv \
+	feh dmenu mpv maim\
 	--needed --noconfirm
 
 # -> Intalling stuffs from git <- # 
